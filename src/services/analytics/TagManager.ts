@@ -97,13 +97,13 @@ export class TagManagerService {
    */
   trackEvent(eventName: string, parameters?: Record<string, unknown>): void {
     if (!this.isInitialized || !this.config?.enabled) {
-      this.log('TagManager: Not initialized or disabled, skipping event:', eventName);
+      this.log('TagManager: Not initialized or disabled, skipping event', { eventName });
       return;
     }
 
     // Check if event is allowed for this app
     if (!this.config.events.includes(eventName)) {
-      this.log(`TagManager: Event "${eventName}" not configured for app "${this.currentApp}"`);
+      this.log('TagManager: Event not configured for app', { eventName, app: this.currentApp });
       return;
     }
 
