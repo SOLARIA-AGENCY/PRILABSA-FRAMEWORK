@@ -1,1 +1,175 @@
-# PRILABSA-FRAMEWORK
+# PRILABSA FRAMEWORK
+
+*Developed by [Solaria Agency](https://solaria.agency) • 2025*
+
+A modern, modular, and scalable web framework for multi-client applications with comprehensive subdomain deployment strategy.
+
+## Overview
+
+PRILABSA Framework is an enterprise-grade solution designed for agencies and developers who need to rapidly deploy client websites across multiple subdomains with consistent architecture and performance.
+
+**Key Features:**
+- 🏢 **Multi-app Architecture**: Independent modules for corporate, blog, and catalog sites
+- 🎨 **Atomic Design System**: Comprehensive component library with CVA variants
+- 🚀 **Performance Optimized**: Core Web Vitals focused with advanced optimization
+- 🔧 **TypeScript First**: Complete type safety across the entire framework
+- 📱 **Responsive Design**: Mobile-first approach with TailwindCSS
+- 🌍 **Internationalization**: Built-in i18n support for global deployments
+- 🧪 **Testing Ready**: Jest, RTL, and Cypress integration
+
+## Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/solariaagency/prilabsa-framework.git
+cd prilabsa-framework
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Architecture
+
+### Subdomain Strategy
+
+Deploy multiple client applications on subdomains:
+- `client.com` - Corporate website (main domain)
+- `blog.client.com` - Blog platform
+- `shop.client.com` - E-commerce catalog
+
+### Project Structure
+
+```
+PRILABSA-FRAMEWORK/
+├── src/
+│   ├── apps/                    # Independent application modules
+│   │   ├── corporate/           # Main corporate site
+│   │   ├── blog/               # Blog platform
+│   │   └── catalog/            # E-commerce catalog
+│   ├── components/             # Atomic Design components
+│   │   ├── atoms/              # Basic UI elements
+│   │   ├── molecules/          # Component combinations
+│   │   ├── organisms/          # Complex UI sections
+│   │   ├── pages/             # Full page components
+│   │   └── templates/         # Page layouts
+│   ├── config/                # Framework configuration
+│   ├── hooks/                 # Custom React hooks
+│   ├── services/              # API and external services
+│   ├── types/                 # TypeScript definitions
+│   └── utils/                 # Utility functions
+├── docs/                      # Documentation
+└── tests/                     # Test suites
+```
+
+## Technology Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: TailwindCSS with CSS Custom Properties
+- **State Management**: React Query for server state
+- **Routing**: React Router v7 with nested routing
+- **Testing**: Jest, React Testing Library, Cypress
+- **Build Tool**: Vite with advanced optimization
+- **Components**: Class Variance Authority (CVA)
+- **SEO**: react-helmet-async for meta management
+
+## Development
+
+```bash
+# Development server
+npm run dev
+
+# Type checking
+npm run type-check
+
+# Linting
+npm run lint
+
+# Testing
+npm run test              # Unit tests
+npm run test:e2e         # End-to-end tests
+npm run test:coverage    # Coverage report
+
+# Building
+npm run build            # Production build
+npm run preview          # Preview production build
+```
+
+## Deployment
+
+### Subdomain Configuration
+
+1. **DNS Setup**: Configure A/CNAME records for subdomains
+2. **Build Configuration**: Use environment variables for app-specific builds
+3. **CDN Deployment**: Optimized for Netlify, Vercel, and Cloudflare
+
+### Environment Variables
+
+```env
+VITE_APP_NAME=corporate|blog|catalog
+VITE_API_BASE_URL=your_api_url
+VITE_CDN_URL=your_cdn_url
+VITE_CONTENTFUL_SPACE_ID=your_space_id
+VITE_CONTENTFUL_ACCESS_TOKEN=your_token
+```
+
+## Component Library
+
+Built with Atomic Design methodology:
+
+```typescript
+import { Button } from '@/components/atoms/Button';
+
+// Usage with variants
+<Button variant="primary" size="lg" fullWidth>
+  Get Started
+</Button>
+```
+
+## Performance
+
+- **Bundle Size**: ~80KB gzipped
+- **First Load**: <2s on 3G
+- **Core Web Vitals**: 
+  - LCP: <2.5s
+  - FID: <100ms
+  - CLS: <0.1
+
+## Browser Support
+
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+
+## Contributing
+
+This framework is developed and maintained by [Solaria Agency](https://solaria.agency).
+
+For custom implementations and enterprise support:
+- 📧 **Contact**: hello@solaria.agency
+- 🌐 **Website**: [solaria.agency](https://solaria.agency)
+- 📱 **Consultation**: Available for custom framework implementations
+
+## Documentation
+
+- [Architecture Guide](./docs/ARCHITECTURE.md)
+- [Implementation Guide](./docs/IMPLEMENTATION.md)
+- [Product Requirements](./docs/PRD.md)
+- [Component Library](./docs/COMPONENTS.md)
+
+## License
+
+© 2025 [Solaria Agency](https://solaria.agency). All rights reserved.
+
+*Professional web development solutions for modern businesses.*
+
+---
+
+**Built with ❤️ by Solaria Agency**  
+*Transforming digital experiences since 2025*
