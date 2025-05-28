@@ -12,6 +12,19 @@ dist
 dist-ssr
 *.local
 
+# Environment files (SECURITY CRITICAL)
+.env
+.env.*
+!.env.example
+
+# Security and sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+.secrets
+config/secrets.*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +35,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Testing and coverage
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+
+# Build and deployment
+.vercel
+.netlify
+.firebase

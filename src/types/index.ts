@@ -207,7 +207,7 @@ export interface MediaAsset {
 export interface PageComponent {
   id: string;
   type: string;
-  props: Record<string, any>;
+  props: Record<string, unknown>;
   order: number;
 }
 
@@ -226,7 +226,7 @@ export interface ApiResponse<T> {
     status: number;
     name: string;
     message: string;
-    details?: Record<string, any>;
+    details?: Record<string, unknown>;
   };
 }
 
@@ -234,7 +234,7 @@ export interface QueryParams {
   page?: number;
   pageSize?: number;
   sort?: string;
-  filters?: Record<string, any>;
+  filters?: Record<string, unknown>;
   populate?: string[];
   locale?: string;
 }
@@ -281,7 +281,7 @@ export interface FormField {
     min?: number;
     max?: number;
     pattern?: string;
-    custom?: (value: any) => boolean | string;
+    custom?: (value: unknown) => boolean | string;
   };
   options?: Array<{ label: string; value: string }>;
 }
@@ -302,7 +302,7 @@ export interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-  properties?: Record<string, any>;
+  properties?: Record<string, unknown>;
 }
 
 // Error Types
@@ -310,7 +310,7 @@ export interface FrameworkError {
   code: string;
   message: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
-  context?: Record<string, any>;
+  context?: Record<string, unknown>;
   timestamp: string;
 }
 
