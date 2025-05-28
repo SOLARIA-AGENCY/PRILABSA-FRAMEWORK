@@ -30,7 +30,15 @@ const EnterpriseDashboard: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <img src={solariaLogo} alt="Solaria Agency" className="h-12 w-auto" />
+              <img 
+                src={solariaLogo} 
+                alt="Solaria Agency" 
+                className="h-12 w-auto" 
+                width="120" 
+                height="48"
+                loading="eager"
+                decoding="async"
+              />
               <div className="border-l border-slate-300 pl-4">
                 <div className="text-sm text-slate-600 font-medium">Desarrollado por</div>
                 <div className="text-lg font-bold text-slate-900">SOLARIA.AGENCY</div>
@@ -109,21 +117,21 @@ const EnterpriseDashboard: React.FC = () => {
             <div className="space-y-3 text-sm text-slate-600 mb-4">
               <div className="flex justify-between">
                 <span>Penetration Testing</span>
-                <span className="text-green-600 font-medium">✓ Completed</span>
+                <span className="text-green-700 font-semibold">✓ Completed</span>
               </div>
               <div className="flex justify-between">
                 <span>Vulnerability Assessment</span>
-                <span className="text-green-600 font-medium">✓ Zero Found</span>
+                <span className="text-green-700 font-semibold">✓ Zero Found</span>
               </div>
               <div className="flex justify-between">
                 <span>SSL/TLS Analysis</span>
-                <span className="text-green-600 font-medium">✓ Grade A+</span>
+                <span className="text-green-700 font-semibold">✓ Grade A+</span>
               </div>
             </div>
             <div className="bg-slate-50 rounded-lg p-3 text-xs text-slate-600">
               <strong>Detalles del Audit:</strong> Pruebas exhaustivas de penetración realizadas con herramientas enterprise como OWASP ZAP, Nessus y análisis manual de código. Evaluación completa de superficie de ataque, autenticación, autorización y protección de datos.
             </div>
-            <Link to="/technical" className="inline-flex items-center mt-3 text-green-600 hover:text-green-700 text-sm font-medium">
+            <Link to="/technical" className="inline-flex items-center mt-3 text-green-700 hover:text-green-800 text-sm font-medium">
               Ver Reporte Completo →
             </Link>
           </div>
@@ -146,15 +154,15 @@ const EnterpriseDashboard: React.FC = () => {
             <div className="space-y-3 text-sm text-slate-600 mb-4">
               <div className="flex justify-between">
                 <span>Content Security Policy</span>
-                <span className="text-green-600 font-medium">✓ Strict</span>
+                <span className="text-green-700 font-semibold">✓ Strict</span>
               </div>
               <div className="flex justify-between">
                 <span>HSTS + Preload</span>
-                <span className="text-green-600 font-medium">✓ Max Age 1Y</span>
+                <span className="text-green-700 font-semibold">✓ Max Age 1Y</span>
               </div>
               <div className="flex justify-between">
                 <span>Cross-Origin Protection</span>
-                <span className="text-green-600 font-medium">✓ Hardened</span>
+                <span className="text-green-700 font-semibold">✓ Hardened</span>
               </div>
             </div>
             <div className="bg-slate-50 rounded-lg p-3 text-xs text-slate-600">
@@ -164,7 +172,7 @@ const EnterpriseDashboard: React.FC = () => {
               href="https://securityheaders.com/?q=https%3A%2F%2Fsolaria-agency-framework.netlify.app%2F" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-flex items-center mt-3 text-blue-600 hover:text-blue-700 text-sm font-medium"
+              className="inline-flex items-center mt-3 text-blue-700 hover:text-blue-800 text-sm font-medium"
             >
               Verificar Headers Live →
             </a>
@@ -188,21 +196,21 @@ const EnterpriseDashboard: React.FC = () => {
             <div className="space-y-3 text-sm text-slate-600 mb-4">
               <div className="flex justify-between">
                 <span>Dependency Scan</span>
-                <span className="text-green-600 font-medium">✓ Clean</span>
+                <span className="text-green-700 font-semibold">✓ Clean</span>
               </div>
               <div className="flex justify-between">
                 <span>SAST Analysis</span>
-                <span className="text-green-600 font-medium">✓ No Issues</span>
+                <span className="text-green-700 font-semibold">✓ No Issues</span>
               </div>
               <div className="flex justify-between">
                 <span>Secret Detection</span>
-                <span className="text-green-600 font-medium">✓ Secure</span>
+                <span className="text-green-700 font-semibold">✓ Secure</span>
               </div>
             </div>
             <div className="bg-slate-50 rounded-lg p-3 text-xs text-slate-600">
               <strong>Análisis Integral:</strong> Escaneo continuo con npm audit, Snyk, y análisis estático de código (SAST). Dependencias actualizadas, sin CVEs conocidos, secrets management implementado y validación de integridad en build pipeline.
             </div>
-            <Link to="/technical" className="inline-flex items-center mt-3 text-purple-600 hover:text-purple-700 text-sm font-medium">
+            <Link to="/technical" className="inline-flex items-center mt-3 text-purple-700 hover:text-purple-800 text-sm font-medium">
               Ver Métricas Detalladas →
             </Link>
           </div>
@@ -450,7 +458,15 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
             <Link to="/" className="flex items-center space-x-3">
-              <img src={solariaIsotipo} alt="Enterprise Framework" className="h-8 w-8" />
+              <img 
+                src={solariaIsotipo} 
+                alt="Enterprise Framework" 
+                className="h-8 w-8" 
+                width="32" 
+                height="32"
+                loading="lazy"
+                decoding="async"
+              />
               <span className="text-white font-bold text-xl hover:text-blue-400 transition-colors">
                 ENTERPRISE FRAMEWORK
               </span>
@@ -480,7 +496,15 @@ const Footer: React.FC = () => {
         {/* Main Solaria Agency Branding */}
         <div className="text-center mb-8 pb-8 border-b border-slate-800">
           <div className="flex items-center justify-center space-x-4 mb-4">
-            <img src={solariaLogo} alt="Solaria Agency" className="h-10 w-auto" />
+            <img 
+              src={solariaLogo} 
+              alt="Solaria Agency" 
+              className="h-10 w-auto" 
+              width="100" 
+              height="40"
+              loading="lazy"
+              decoding="async"
+            />
             <div className="text-2xl font-bold text-white">SOLARIA.AGENCY</div>
           </div>
           <p className="text-slate-400 max-w-2xl mx-auto">

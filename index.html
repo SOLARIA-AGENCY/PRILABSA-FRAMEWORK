@@ -39,14 +39,23 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://solaria-agency-framework.netlify.app/" />
     
-    <!-- DNS Prefetch -->
+    <!-- Performance Optimization: DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    
-    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical Font Preload for Core Web Vitals -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    
+    <!-- Fallback for CSS load failure -->
+    <style>
+      /* Critical CSS - System fonts fallback */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      }
+    </style>
     
     <!-- Theme -->
     <meta name="theme-color" content="#0f172a" />

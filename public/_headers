@@ -1,6 +1,6 @@
 /*
-  # ENTERPRISE SECURITY HEADERS - ECO-Lambda v2.0
-  # Based on EXTERNAL_SECURITY_AUDIT.md findings
+  # ENTERPRISE SECURITY HEADERS - ECO-Lambda v2.1 
+  # Performance Optimized Based on PageSpeed Insights
   
   # Core Security Headers
   X-Frame-Options: DENY
@@ -21,8 +21,7 @@
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Resource-Policy: cross-origin
   
-  # Performance & Caching
-  Cache-Control: public, max-age=31536000, immutable
+  # Performance Optimization
   X-DNS-Prefetch-Control: on
   
   # SEO & Crawling
@@ -32,14 +31,17 @@
   NEL: {"report_to":"default","max_age":31536000,"include_subdomains":true}
   Report-To: {"group":"default","max_age":31536000,"endpoints":[{"url":"https://solaria.agency/nel-report"}],"include_subdomains":true}
 
+# Static Assets Cache Optimization (1 year for immutable assets)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
 
+# Fonts - Long cache with CORS
 /assets/*.woff2
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
 
+# Images - 30 day cache  
 /assets/*.jpg
   Cache-Control: public, max-age=2592000
   X-Content-Type-Options: nosniff
@@ -52,6 +54,22 @@
   Cache-Control: public, max-age=2592000
   X-Content-Type-Options: nosniff
 
+# HTML files - 5 minute cache with revalidation
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Service Worker - no cache
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Manifest and config files - 1 day cache
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+# API endpoints - no cache
 /api/*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
