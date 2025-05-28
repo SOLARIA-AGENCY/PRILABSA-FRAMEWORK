@@ -8,15 +8,12 @@ import React from 'react';
 import { DependencyMatrix } from './components/DependencyMatrix/DependencyMatrix';
 import { TestingDashboard } from './components/TestingDashboard/TestingDashboard';
 import { SystemHealth } from './components/SystemHealth/SystemHealth';
-import { Helmet } from 'react-helmet-async';
 
 export const TechnicalPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Technical Dashboard - PRILABSA Framework</title>
-        <meta name="description" content="Technical information, dependencies, and system metrics" />
-      </Helmet>
+      <title>Technical Dashboard - PRILABSA Framework</title>
+      <meta name="description" content="Technical information, dependencies, and system metrics" />
       
       {/* Header */}
       <div className="bg-white shadow-sm border-b">

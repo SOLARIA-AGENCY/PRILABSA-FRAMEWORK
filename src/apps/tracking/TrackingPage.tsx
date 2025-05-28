@@ -4,16 +4,13 @@
  * Website: https://solaria.agency
  */
 
-import { Helmet } from 'react-helmet-async';
 import { Button } from '../../components/atoms/Button/Button';
 
 export const TrackingPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Tracking Management - PRILABSA Framework</title>
-        <meta name="description" content="Manage analytics codes and tracking integrations" />
-      </Helmet>
+      <title>Tracking Management - PRILABSA Framework</title>
+      <meta name="description" content="Manage analytics codes and tracking integrations" />
       
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
