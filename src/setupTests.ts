@@ -4,13 +4,18 @@
  * Website: https://solaria.agency
  */
 
+// Import jest-dom matchers
 import '@testing-library/jest-dom';
 
-// Ensure jest-dom matchers are available
+// Extend Jest matchers with jest-dom
 declare global {
   namespace jest {
     interface Matchers<R> {
       toBeInTheDocument(): R;
+      toHaveClass(...classNames: string[]): R;
+      toBeDisabled(): R;
+      toHaveFocus(): R;
+      toHaveAttribute(attr: string, value?: string): R;
     }
   }
 } 
