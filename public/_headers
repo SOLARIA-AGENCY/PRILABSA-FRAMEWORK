@@ -32,30 +32,26 @@
   NEL: {"report_to":"default","max_age":31536000,"include_subdomains":true}
   Report-To: {"group":"default","max_age":31536000,"endpoints":[{"url":"https://solaria.agency/nel-report"}],"include_subdomains":true}
 
-# Static Assets - Extended Caching
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
 
-# Fonts - Optimized
-*.woff2
+/assets/*.woff2
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
 
-# Images - Optimized
-*.jpg
+/assets/*.jpg
   Cache-Control: public, max-age=2592000
   X-Content-Type-Options: nosniff
 
-*.png
+/assets/*.png
   Cache-Control: public, max-age=2592000
   X-Content-Type-Options: nosniff
 
-*.svg
+/assets/*.svg
   Cache-Control: public, max-age=2592000
   X-Content-Type-Options: nosniff
 
-# API Routes (if any)
 /api/*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
