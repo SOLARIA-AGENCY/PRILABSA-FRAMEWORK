@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://solaria-agency-framework.netlify.app/sitemap.xml
+
+# Crawl optimization
+Crawl-delay: 1
+
+# Block sensitive paths (if any)
+Disallow: /admin
+Disallow: /config
+Disallow: /*.json$
+Disallow: /*?*
+
+# Allow important resources
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.woff2$
+
+# SEO optimization
+Host: https://solaria-agency-framework.netlify.app 

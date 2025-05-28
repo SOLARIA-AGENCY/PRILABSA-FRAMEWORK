@@ -1,11 +1,27 @@
 Contact: security@solaria.agency
+Contact: https://solaria.agency/security-contact
 Expires: 2026-05-28T23:59:59.000Z
 Canonical: https://solaria-agency-framework.netlify.app/.well-known/security.txt
 Policy: https://solaria.agency/security-policy
 Acknowledgments: https://solaria.agency/security-acknowledgments
 Preferred-Languages: en, es
 Hiring: https://solaria.agency/careers
+Encryption: https://solaria.agency/pgp-key.asc
 
-# ECO-Lambda Security Framework
+# ECO-Lambda Enterprise Security Framework
 # Report security vulnerabilities responsibly
-# All reports will be investigated promptly 
+# All reports will be investigated within 24 hours
+# 
+# Scope: 
+# - Web application vulnerabilities
+# - Infrastructure security issues  
+# - Data privacy concerns
+# - Authentication/authorization flaws
+#
+# Out of Scope:
+# - Social engineering attacks
+# - Physical security
+# - Third-party service vulnerabilities
+#
+# Bounty Program: Available for critical findings
+# Response SLA: 24 hours acknowledgment, 72 hours initial assessment 

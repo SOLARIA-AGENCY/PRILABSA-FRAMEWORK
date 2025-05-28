@@ -1,0 +1,71 @@
+{
+  "name": "PRILABSA Framework - Enterprise Web Development Platform",
+  "short_name": "PRILABSA",
+  "description": "Enterprise-grade web framework for multi-client applications by Solaria Agency",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6b35",
+  "orientation": "portrait-primary",
+  "categories": ["developer", "productivity", "business"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/solaria-isotipo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/solaria-isotipo.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshot-wide.png",
+      "sizes": "1280x720", 
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "PRILABSA Framework Dashboard"
+    },
+    {
+      "src": "/assets/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png", 
+      "form_factor": "narrow",
+      "label": "PRILABSA Framework Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Technical Dashboard",
+      "short_name": "Technical",
+      "description": "Access technical monitoring dashboard",
+      "url": "/technical",
+      "icons": [{"src": "/assets/solaria-isotipo.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Analytics Tracking",
+      "short_name": "Tracking", 
+      "description": "Manage analytics and tracking",
+      "url": "/tracking",
+      "icons": [{"src": "/assets/solaria-isotipo.png", "sizes": "96x96"}]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+} 

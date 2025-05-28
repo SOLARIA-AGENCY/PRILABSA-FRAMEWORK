@@ -4,25 +4,55 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  css: {
-    postcss: './postcss.config.js',
+  build: {
+    // Enterprise production optimizations
+    target: 'esnext',
+    minify: true, // Use default minifier
+    sourcemap: false, // Security: disable source maps in production
+    rollupOptions: {
+      output: {
+        // Security: obscure chunk names
+        chunkFileNames: 'assets/c-[hash].js',
+        entryFileNames: 'assets/e-[hash].js',
+        assetFileNames: 'assets/a-[hash].[ext]',
+        // Code splitting optimization
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom']
+        }
+      }
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096
   },
   server: {
+    // Development security
     headers: {
-      // Security headers for development
       'X-Frame-Options': 'DENY',
       'X-Content-Type-Options': 'nosniff',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      'Referrer-Policy': 'strict-origin-when-cross-origin'
     },
+    // HTTPS in development (optional)
+    // https: true,
   },
   preview: {
+    // Preview server security
     headers: {
-      // Security headers for preview
       'X-Frame-Options': 'DENY',
       'X-Content-Type-Options': 'nosniff',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    },
+      'Referrer-Policy': 'strict-origin-when-cross-origin'
+    }
   },
+  // Performance optimizations
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@testing-library/react']
+  },
+  // Security: environment variables
+  envPrefix: 'VITE_',
+  // CSS optimization
+  css: {
+    devSourcemap: false // Security: disable CSS source maps
+  }
 })
