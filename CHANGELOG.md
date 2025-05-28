@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.1] - 2025-05-28
+
+### 🎨 Updated - Official Solaria Agency Color Implementation
+- **Framework Color Update**
+  - Implemented official Solaria Agency color (#f6921d) as primary framework color
+  - Updated all framework elements (buttons, links, highlights) to use official orange
+  - Maintained color separation between framework branding and client customization
+  - Enhanced hover states and transitions for new color palette
+
+- **Configuration Updates**
+  - Updated framework.config.ts with official Solaria color
+  - Enhanced TailwindCSS configuration with 'solaria-orange' utility class
+  - Updated CSS custom properties for consistent color usage
+  - Fixed TypeScript definitions for framework font configuration
+
+### 🔧 Technical Improvements
+- **Color System Enhancement**
+  - Clear distinction between framework colors (Solaria branding) and client colors
+  - Improved accessibility with appropriate hover states for orange color
+  - Consistent color application across all framework components
+
+---
+
 ## [1.1.0] - 2025-05-28
 
 ### 🎨 Added - Visual Identity & Branding

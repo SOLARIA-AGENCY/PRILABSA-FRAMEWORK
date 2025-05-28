@@ -7,7 +7,11 @@
 
 /* CSS Custom Properties for Theme System */
 :root {
-  --color-brand-primary: #0066cc;
+  /* Framework Colors (Solaria Agency Official) */
+  --color-solaria-orange: #f6921d;
+  --color-brand-primary: #f6921d;
+  
+  /* Client Colors (Customizable) */
   --color-brand-secondary: #4f46e5;
   --color-brand-accent: #06b6d4;
   --color-brand-neutral: #64748b;

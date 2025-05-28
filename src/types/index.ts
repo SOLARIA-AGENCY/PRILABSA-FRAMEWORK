@@ -65,6 +65,7 @@ export interface FrameworkConfig {
       error: string;
     };
     fonts: {
+      framework: string[];
       sans: string[];
       serif: string[];
       mono: string[];

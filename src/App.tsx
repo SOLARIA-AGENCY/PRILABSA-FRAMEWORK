@@ -74,7 +74,7 @@ function App() {
                       href={frameworkConfig.developer.website} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-brand-primary text-white px-4 py-2 rounded-md text-sm font-medium font-framework hover:bg-blue-700 transition-colors"
+                      className="bg-brand-primary text-white px-4 py-2 rounded-md text-sm font-medium font-framework hover:bg-orange-600 transition-colors"
                     >
                       Contact Agency
                     </a>
@@ -180,7 +180,7 @@ function App() {
                         href={frameworkConfig.developer.website}
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-brand-primary hover:text-blue-400 transition-colors"
+                        className="text-brand-primary hover:text-orange-700 font-semibold"
                       >
                         {frameworkConfig.developer.name}
                       </a>
@@ -220,7 +220,7 @@ const HomePage = () => (
           href={frameworkConfig.developer.website}
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-brand-primary hover:text-blue-700 font-semibold"
+          className="text-brand-primary hover:text-orange-700 font-semibold"
         >
           {frameworkConfig.developer.name}
         </a>
@@ -234,7 +234,7 @@ const HomePage = () => (
           </div>
           <h3 className="text-xl font-semibold mb-3">Corporate Site</h3>
           <p className="text-gray-600 mb-4">Professional business presence with modern design and SEO optimization</p>
-          <a href="/" className="text-brand-primary hover:text-blue-700 font-medium">
+          <a href="/" className="text-brand-primary hover:text-orange-700 font-medium">
             Explore Corporate →
           </a>
         </div>
@@ -245,7 +245,7 @@ const HomePage = () => (
           </div>
           <h3 className="text-xl font-semibold mb-3">Blog Platform</h3>
           <p className="text-gray-600 mb-4">Content management system with headless CMS integration and social sharing</p>
-          <a href="/blog" className="text-brand-primary hover:text-blue-700 font-medium">
+          <a href="/blog" className="text-brand-primary hover:text-orange-700 font-medium">
             Visit Blog →
           </a>
         </div>
@@ -256,7 +256,7 @@ const HomePage = () => (
           </div>
           <h3 className="text-xl font-semibold mb-3">Product Catalog</h3>
           <p className="text-gray-600 mb-4">E-commerce showcase with advanced filtering and shopping cart integration</p>
-          <a href="/catalog" className="text-brand-primary hover:text-blue-700 font-medium">
+          <a href="/catalog" className="text-brand-primary hover:text-orange-700 font-medium">
             Browse Catalog →
           </a>
         </div>
@@ -274,7 +274,7 @@ const HomePage = () => (
             href={frameworkConfig.developer.website}
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-brand-primary text-white px-8 py-3 rounded-lg font-semibold font-framework hover:bg-blue-700 transition-colors"
+            className="bg-brand-primary text-white px-8 py-3 rounded-lg font-semibold font-framework hover:bg-orange-700 transition-colors"
           >
             Visit Solaria Agency
           </a>
@@ -312,7 +312,7 @@ const BlogApp = () => (
           href={frameworkConfig.developer.website}
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-brand-primary hover:text-blue-700"
+          className="text-brand-primary hover:text-orange-700"
         >
           {frameworkConfig.developer.name}
         </a>
@@ -344,7 +344,7 @@ const CatalogApp = () => (
           href={frameworkConfig.developer.website}
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-brand-primary hover:text-blue-700"
+          className="text-brand-primary hover:text-orange-700"
         >
           {frameworkConfig.developer.name}
         </a>

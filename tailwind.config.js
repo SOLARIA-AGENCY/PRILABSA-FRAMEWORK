@@ -17,8 +17,10 @@ module.exports = {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
+        // Framework colors (Solaria Agency official branding)
+        'solaria-orange': '#f6921d',
         brand: {
-          primary: '#0066cc',
+          primary: '#f6921d',
           secondary: '#4f46e5',
           accent: '#06b6d4',
           neutral: '#64748b',

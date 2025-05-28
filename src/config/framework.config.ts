@@ -70,7 +70,9 @@ export const frameworkConfig: FrameworkConfig = {
   // Theme Configuration
   theme: {
     colors: {
-      primary: '#0066cc',
+      // Framework color (Solaria Agency official)
+      primary: '#f6921d',
+      // Client colors (customizable)
       secondary: '#4f46e5',
       accent: '#06b6d4',
       neutral: '#64748b',
