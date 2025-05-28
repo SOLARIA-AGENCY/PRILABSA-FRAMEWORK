@@ -9,13 +9,6 @@ import userEvent from '@testing-library/user-event';
 import { describe, it, expect, jest } from '@jest/globals';
 import { Button } from './Button';
 
-// Helper function to get button and text
-const getButton = (name?: string) => {
-  const utils = render(<Button>{name || 'Test Button'}</Button>);
-  const button = utils.container.querySelector('button');
-  return { button, ...utils };
-};
-
 describe('Button Component', () => {
   describe('Rendering', () => {
     it('renders with default props', () => {

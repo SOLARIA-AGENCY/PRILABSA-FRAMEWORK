@@ -9,49 +9,8 @@ import { DependencyMatrix } from './components/DependencyMatrix/DependencyMatrix
 import { TestingDashboard } from './components/TestingDashboard/TestingDashboard';
 import { SystemHealth } from './components/SystemHealth/SystemHealth';
 import { Helmet } from 'react-helmet-async';
-import { Button } from '../../components/atoms/Button/Button';
 
 export const TechnicalPage: React.FC = () => {
-  // Mock data - In real implementation, this would come from APIs/package.json
-  const frameworkInfo = {
-    name: "PRILABSA Framework",
-    version: "1.1.2",
-    buildDate: new Date().toISOString().split('T')[0],
-    nodeVersion: "18.19.0",
-    environment: "development"
-  };
-
-  const dependencies = [
-    { name: "react", version: "19.1.0", type: "core", status: "latest" },
-    { name: "typescript", version: "5.6.3", type: "core", status: "latest" },
-    { name: "vite", version: "6.3.5", type: "build", status: "latest" },
-    { name: "tailwindcss", version: "3.4.17", type: "styling", status: "latest" },
-    { name: "react-router-dom", version: "7.1.1", type: "routing", status: "latest" },
-    { name: "@tanstack/react-query", version: "5.67.1", type: "data", status: "latest" },
-    { name: "react-helmet-async", version: "2.0.5", type: "seo", status: "latest" },
-    { name: "jest", version: "29.7.0", type: "testing", status: "latest" }
-  ];
-
-  const testMetrics = {
-    totalTests: 95,
-    passing: 95,
-    failing: 0,
-    coverage: {
-      statements: 100,
-      branches: 100,
-      functions: 100,
-      lines: 100
-    },
-    lastRun: new Date().toLocaleString()
-  };
-
-  const buildMetrics = {
-    bundleSize: "275.53 kB",
-    buildTime: "1.32s",
-    chunks: 3,
-    assetsOptimized: true
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>

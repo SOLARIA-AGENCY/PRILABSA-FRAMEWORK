@@ -8,10 +8,10 @@
 declare global {
   interface Window {
     fbq: {
-      (...args: any[]): void;
-      queue?: any[];
-    } & any;
-    _fbq: any;
+      (...args: unknown[]): void;
+      queue?: unknown[];
+    } & Record<string, unknown>;
+    _fbq: unknown;
   }
 }
 
@@ -115,19 +115,19 @@ export class MetaPixelService {
   private configurePixel(): void {
     // Initialize fbq if not already present
     if (!window.fbq) {
-      const fbqFunction: any = function(...args: any[]) {
+      const fbqFunction: ((...args: unknown[]) => void) & { queue?: unknown[] } = function(...args: unknown[]) {
         fbqFunction.queue = fbqFunction.queue || [];
         fbqFunction.queue.push(args);
       };
-      fbqFunction.queue = [] as any[];
-      window.fbq = fbqFunction;
+      fbqFunction.queue = [] as unknown[];
+      window.fbq = fbqFunction as Window['fbq'];
     }
   }
 
   /**
    * Track custom event
    */
-  trackEvent(eventName: string, parameters?: Record<string, any>): void {
+  trackEvent(eventName: string, parameters?: Record<string, unknown>): void {
     if (!this.isInitialized || !window.fbq) {
       console.warn('Meta Pixel: Not initialized, skipping event:', eventName);
       return;
@@ -170,7 +170,7 @@ export class MetaPixelService {
   /**
    * Track custom conversion
    */
-  trackCustomEvent(eventName: string, parameters?: Record<string, any>): void {
+  trackCustomEvent(eventName: string, parameters?: Record<string, unknown>): void {
     if (!this.isInitialized || !window.fbq) return;
 
     try {
@@ -211,8 +211,8 @@ export class MetaPixelService {
     this.pixelId = null;
     
     // Clear fbq
-    if (window.fbq) {
-      (window as any).fbq = undefined;
+    if ('fbq' in window) {
+      delete (window as unknown as Record<string, unknown>).fbq;
     }
     
     console.log('Meta Pixel: Service destroyed');

@@ -95,7 +95,7 @@ export class TagManagerService {
   /**
    * Track custom event across all enabled platforms
    */
-  trackEvent(eventName: string, parameters?: Record<string, any>): void {
+  trackEvent(eventName: string, parameters?: Record<string, unknown>): void {
     if (!this.isInitialized || !this.config?.enabled) {
       this.log('TagManager: Not initialized or disabled, skipping event:', eventName);
       return;
@@ -128,9 +128,14 @@ export class TagManagerService {
   }
 
   /**
-   * Track conversion event (e-commerce, leads, etc.)
+   * Track conversion event with enhanced parameters
    */
-  trackConversion(conversionType: string, value?: number, currency?: string, parameters?: Record<string, any>): void {
+  trackConversion(
+    conversionType: string, 
+    value?: number, 
+    currency?: string, 
+    parameters?: Record<string, unknown>
+  ): void {
     if (!this.isInitialized || !this.config?.enabled) return;
 
     const conversionData = {
@@ -158,23 +163,28 @@ export class TagManagerService {
   }
 
   /**
-   * Track custom Meta Pixel event
+   * Track custom event with specific parameters
    */
-  trackCustomEvent(eventName: string, parameters?: Record<string, any>): void {
-    if (!this.isInitialized || !this.config?.enabled || !this.config.metaPixel) return;
+  trackCustomEvent(eventName: string, parameters?: Record<string, unknown>): void {
+    if (!this.isInitialized || !this.config?.enabled) return;
 
     try {
-      metaPixel.trackCustomEvent(eventName, parameters);
-      this.log('TagManager: Custom event tracked', { eventName, parameters });
+      if (this.config.googleAnalytics) {
+        googleAnalytics.trackEvent(eventName, parameters);
+      }
+      if (this.config.metaPixel) {
+        metaPixel.trackCustomEvent(eventName, parameters);
+      }
+      this.log('TagManager: Custom event tracked:', { eventName, parameters });
     } catch (error) {
-      console.error('TagManager: Custom event tracking failed:', error);
+      console.error('TagManager: Custom event failed:', error);
     }
   }
 
   /**
-   * Set user properties across platforms
+   * Set user properties across all platforms
    */
-  setUserProperties(properties: Record<string, any>): void {
+  setUserProperties(properties: Record<string, unknown>): void {
     if (!this.isInitialized || !this.config?.enabled) return;
 
     try {
@@ -235,9 +245,9 @@ export class TagManagerService {
   }
 
   /**
-   * Internal logging method
+   * Log helper method for debugging
    */
-  private log(message: string, data?: any): void {
+  private log(message: string, data?: Record<string, unknown>): void {
     if (this.enableLogging) {
       if (data) {
         console.log(message, data);

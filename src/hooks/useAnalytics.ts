@@ -16,11 +16,11 @@ export interface UseAnalyticsOptions {
 }
 
 export interface AnalyticsAPI {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (path?: string, title?: string) => void;
-  trackConversion: (conversionType: string, value?: number, currency?: string, parameters?: Record<string, any>) => void;
-  trackCustomEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  setUserProperties: (properties: Record<string, any>) => void;
+  trackConversion: (conversionType: string, value?: number, currency?: string, parameters?: Record<string, unknown>) => void;
+  trackCustomEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
+  setUserProperties: (properties: Record<string, unknown>) => void;
   isEnabled: boolean;
   currentApp: string | null;
 }
@@ -81,7 +81,7 @@ export const useAnalytics = (options: UseAnalyticsOptions): AnalyticsAPI => {
   }, []);
 
   // Memoized API methods
-  const trackEvent = useCallback((eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = useCallback((eventName: string, parameters?: Record<string, unknown>) => {
     if (isInitializedRef.current) {
       tagManager.trackEvent(eventName, parameters);
     }
@@ -97,20 +97,20 @@ export const useAnalytics = (options: UseAnalyticsOptions): AnalyticsAPI => {
     conversionType: string,
     value?: number,
     currency?: string,
-    parameters?: Record<string, any>
+    parameters?: Record<string, unknown>
   ) => {
     if (isInitializedRef.current) {
       tagManager.trackConversion(conversionType, value, currency, parameters);
     }
   }, []);
 
-  const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string, any>) => {
+  const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string, unknown>) => {
     if (isInitializedRef.current) {
       tagManager.trackCustomEvent(eventName, parameters);
     }
   }, []);
 
-  const setUserProperties = useCallback((properties: Record<string, any>) => {
+  const setUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (isInitializedRef.current) {
       tagManager.setUserProperties(properties);
     }

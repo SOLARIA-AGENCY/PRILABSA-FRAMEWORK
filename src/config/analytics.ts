@@ -7,7 +7,7 @@
 
 export interface AnalyticsEvent {
   name: string;
-  parameters?: Record<string, any>;
+  parameters?: Record<string, unknown>;
 }
 
 export interface AppAnalyticsConfig {
@@ -20,8 +20,8 @@ export interface AppAnalyticsConfig {
 
 export const analyticsConfig: Record<string, AppAnalyticsConfig> = {
   corporate: {
-    googleAnalytics: process.env.VITE_GA_CORPORATE_ID,
-    metaPixel: process.env.VITE_META_PIXEL_CORPORATE_ID,
+    googleAnalytics: import.meta.env.VITE_GA_CORPORATE_ID,
+    metaPixel: import.meta.env.VITE_META_PIXEL_CORPORATE_ID,
     enabled: true,
     events: ['page_view', 'contact_form', 'download', 'service_inquiry'],
     customDimensions: {
@@ -30,8 +30,8 @@ export const analyticsConfig: Record<string, AppAnalyticsConfig> = {
     }
   },
   blog: {
-    googleAnalytics: process.env.VITE_GA_BLOG_ID,
-    metaPixel: process.env.VITE_META_PIXEL_BLOG_ID,
+    googleAnalytics: import.meta.env.VITE_GA_BLOG_ID,
+    metaPixel: import.meta.env.VITE_META_PIXEL_BLOG_ID,
     enabled: true,
     events: ['page_view', 'article_read', 'share', 'comment', 'newsletter_signup'],
     customDimensions: {
@@ -40,8 +40,8 @@ export const analyticsConfig: Record<string, AppAnalyticsConfig> = {
     }
   },
   catalog: {
-    googleAnalytics: process.env.VITE_GA_CATALOG_ID,
-    metaPixel: process.env.VITE_META_PIXEL_CATALOG_ID,
+    googleAnalytics: import.meta.env.VITE_GA_CATALOG_ID,
+    metaPixel: import.meta.env.VITE_META_PIXEL_CATALOG_ID,
     enabled: true,
     events: ['page_view', 'product_view', 'add_to_cart', 'purchase', 'search'],
     customDimensions: {

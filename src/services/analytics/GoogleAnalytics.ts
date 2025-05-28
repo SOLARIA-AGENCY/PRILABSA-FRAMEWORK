@@ -7,8 +7,8 @@
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }
 
@@ -82,15 +82,15 @@ export class GoogleAnalyticsService {
    */
   private configureDataLayer(): void {
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function() {
-      window.dataLayer.push(arguments);
+    window.gtag = window.gtag || function(...args: unknown[]) {
+      window.dataLayer.push(args);
     };
   }
 
   /**
    * Track custom event
    */
-  trackEvent(eventName: string, parameters?: Record<string, any>): void {
+  trackEvent(eventName: string, parameters?: Record<string, unknown>): void {
     if (!this.isInitialized || !window.gtag) {
       console.warn('GA4: Not initialized, skipping event:', eventName);
       return;
@@ -124,7 +124,7 @@ export class GoogleAnalyticsService {
   /**
    * Set user properties
    */
-  setUserProperties(properties: Record<string, any>): void {
+  setUserProperties(properties: Record<string, unknown>): void {
     if (!this.isInitialized || !window.gtag) return;
 
     try {

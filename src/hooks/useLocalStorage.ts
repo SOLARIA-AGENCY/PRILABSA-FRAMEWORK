@@ -4,7 +4,7 @@
  * Website: https://solaria.agency
  */
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 /**
  * Custom hook for managing localStorage values with React state
