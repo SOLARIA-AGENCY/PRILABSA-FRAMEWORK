@@ -77,6 +77,10 @@ describe('Formatters', () => {
     it('handles large numbers', () => {
       expect(formatBytes(1073741824)).toBe('1 GB');
     });
+
+    it('handles negative decimals by setting to 0', () => {
+      expect(formatBytes(1536, -1)).toBe('2 KB');
+    });
   });
 
   describe('truncateText', () => {
