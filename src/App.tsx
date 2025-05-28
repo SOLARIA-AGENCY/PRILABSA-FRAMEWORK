@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { frameworkConfig } from './config/framework.config';
 import { TrackingPage } from './apps/tracking/TrackingPage';
@@ -59,21 +59,21 @@ function App() {
                   </div>
                 </div>
                 <nav className="flex items-center space-x-6">
-                  <a href="/" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
+                  <Link to="/" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
                     Home
-                  </a>
-                  <a href="/blog" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
+                  </Link>
+                  <Link to="/blog" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
                     Blog
-                  </a>
-                  <a href="/catalog" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
+                  </Link>
+                  <Link to="/catalog" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
                     Catalog
-                  </a>
-                  <a href="/tracking" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
+                  </Link>
+                  <Link to="/tracking" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
                     Tracking
-                  </a>
-                  <a href="/technical" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
+                  </Link>
+                  <Link to="/technical" className="text-gray-600 hover:text-gray-900 font-medium font-framework transition-colors">
                     Technical
-                  </a>
+                  </Link>
                   <a 
                     href={frameworkConfig.developer.website} 
                     target="_blank" 
@@ -120,11 +120,11 @@ function App() {
                 <div>
                   <h4 className="text-md font-semibold mb-3 font-framework">Framework</h4>
                   <ul className="space-y-2 text-sm text-gray-300">
-                    <li><a href="/" className="hover:text-white transition-colors">Corporate Site</a></li>
-                    <li><a href="/blog" className="hover:text-white transition-colors">Blog Platform</a></li>
-                    <li><a href="/catalog" className="hover:text-white transition-colors">Product Catalog</a></li>
-                    <li><a href="/tracking" className="hover:text-white transition-colors">Tracking Management</a></li>
-                    <li><a href="/technical" className="hover:text-white transition-colors">Technical Dashboard</a></li>
+                    <li><Link to="/" className="hover:text-white transition-colors">Corporate Site</Link></li>
+                    <li><Link to="/blog" className="hover:text-white transition-colors">Blog Platform</Link></li>
+                    <li><Link to="/catalog" className="hover:text-white transition-colors">Product Catalog</Link></li>
+                    <li><Link to="/tracking" className="hover:text-white transition-colors">Tracking Management</Link></li>
+                    <li><Link to="/technical" className="hover:text-white transition-colors">Technical Dashboard</Link></li>
                   </ul>
                 </div>
                 
@@ -241,9 +241,9 @@ const HomePage = () => (
           </div>
           <h3 className="text-lg font-semibold mb-3">Corporate Site</h3>
           <p className="text-gray-600 mb-4 text-sm">Professional business presence with modern design and SEO optimization</p>
-          <a href="/" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
+          <Link to="/" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
             Explore Corporate →
-          </a>
+          </Link>
         </div>
         
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
@@ -252,9 +252,9 @@ const HomePage = () => (
           </div>
           <h3 className="text-lg font-semibold mb-3">Blog Platform</h3>
           <p className="text-gray-600 mb-4 text-sm">Content management system with headless CMS integration and social sharing</p>
-          <a href="/blog" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
+          <Link to="/blog" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
             Visit Blog →
-          </a>
+          </Link>
         </div>
         
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
@@ -263,9 +263,9 @@ const HomePage = () => (
           </div>
           <h3 className="text-lg font-semibold mb-3">Product Catalog</h3>
           <p className="text-gray-600 mb-4 text-sm">E-commerce showcase with advanced filtering and shopping cart integration</p>
-          <a href="/catalog" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
+          <Link to="/catalog" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
             Browse Catalog →
-          </a>
+          </Link>
         </div>
 
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
@@ -274,9 +274,9 @@ const HomePage = () => (
           </div>
           <h3 className="text-lg font-semibold mb-3">Tracking</h3>
           <p className="text-gray-600 mb-4 text-sm">Analytics codes management, tracking pixels, and third-party integrations</p>
-          <a href="/tracking" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
+          <Link to="/tracking" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
             Manage Tracking →
-          </a>
+          </Link>
         </div>
 
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
@@ -285,9 +285,9 @@ const HomePage = () => (
           </div>
           <h3 className="text-lg font-semibold mb-3">Technical</h3>
           <p className="text-gray-600 mb-4 text-sm">Framework info, dependencies, testing metrics, and technical dashboard</p>
-          <a href="/technical" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
+          <Link to="/technical" className="text-brand-primary hover:text-orange-700 font-medium text-sm">
             View Dashboard →
-          </a>
+          </Link>
         </div>
       </div>
       
