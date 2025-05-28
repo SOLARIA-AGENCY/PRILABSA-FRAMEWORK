@@ -120,7 +120,7 @@ function App() {
                     </ul>
                   </div>
                   
-                  <div>
+      <div>
                     <h4 className="text-md font-semibold mb-3 font-framework">Solaria Agency</h4>
                     <ul className="space-y-2 text-sm text-gray-300">
                       <li>
