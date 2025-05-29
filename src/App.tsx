@@ -17,7 +17,7 @@ const queryClient = new QueryClient({
   },
 });
 
-// Enterprise Dashboard Component
+// Enterprise Dashboard Component - CLIENT OPTIMIZED VERSION
 const EnterpriseDashboard: React.FC = () => {
   const securityScore = 9.8;
   const testsCount = 95;
@@ -25,7 +25,7 @@ const EnterpriseDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Solaria Agency Branding Header */}
+      {/* Solaria Agency Branding Header - PRIMARY DEVELOPER BANNER */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -45,8 +45,32 @@ const EnterpriseDashboard: React.FC = () => {
               </div>
             </div>
             <div className="text-right">
-              <div className="text-sm text-slate-600">Proyecto Enterprise</div>
+              <div className="text-sm text-slate-600">Enterprise Development</div>
               <div className="text-lg font-bold text-blue-600">FRAMEWORK CERTIFICADO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Client Information Header - SECONDARY CLIENT BANNER */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-2">CLIENTE</h1>
+            <div className="flex flex-wrap justify-center items-center gap-6 text-lg">
+              <a href="https://www.cliente.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">
+                🌐 www.cliente.com
+              </a>
+              <a href="https://instagram.com/cliente" target="_blank" rel="noopener noreferrer" className="hover:text-pink-200 transition-colors">
+                📷 IG: @cliente
+              </a>
+              <a href="https://x.com/cliente" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">
+                🐦 X: @cliente
+              </a>
+              <span className="text-blue-200">🏢 Hosting: [Proveedor de Hosting]</span>
+            </div>
+            <div className="mt-4 text-sm opacity-90">
+              🏆 Framework Enterprise desarrollado exclusivamente por <span className="font-bold">SOLARIA.AGENCY</span>
             </div>
           </div>
         </div>
@@ -88,13 +112,95 @@ const EnterpriseDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Security & Compliance Section */}
+      {/* Enterprise Applications Section - MOVED TO TOP */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Enterprise Applications</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Aplicaciones modulares construidas con estándares de nivel empresarial y protocolos de seguridad 
+              personalizados para <span className="font-bold text-blue-600">CLIENTE</span>.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link to="/corporate" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-blue-300">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H5m4 0V9a2 2 0 011-1h4a2 2 0 011 1v12" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Corporate Site</h3>
+              <p className="text-slate-600 mb-4">Presentación corporativa profesional con branding empresarial y características de cumplimiento para CLIENTE.</p>
+              <span className="text-blue-600 font-medium group-hover:text-blue-700">Access Application →</span>
+            </Link>
+
+            <Link to="/technical" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-green-300">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Technical Dashboard</h3>
+              <p className="text-slate-600 mb-4">Monitoreo integral de sistemas, métricas de seguridad y analíticas de infraestructura para CLIENTE.</p>
+              <span className="text-green-600 font-medium group-hover:text-green-700">View Metrics →</span>
+            </Link>
+
+            <Link to="/blog" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-purple-300">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Content Platform</h3>
+              <p className="text-slate-600 mb-4">Gestión de contenido de nivel empresarial con optimización SEO y características de seguridad para CLIENTE.</p>
+              <span className="text-purple-600 font-medium group-hover:text-purple-700">Manage Content →</span>
+            </Link>
+
+            <Link to="/catalog" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-orange-300">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition-colors">
+                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Product Catalog</h3>
+              <p className="text-slate-600 mb-4">Catálogo e-commerce seguro con inventario empresarial y gestión de transacciones para CLIENTE.</p>
+              <span className="text-orange-600 font-medium group-hover:text-orange-700">Browse Products →</span>
+            </Link>
+
+            <Link to="/tracking" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-indigo-300">
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition-colors">
+                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Analytics Tracking</h3>
+              <p className="text-slate-600 mb-4">Analíticas compatibles con privacidad y protección de datos de nivel empresarial con cumplimiento GDPR para CLIENTE.</p>
+              <span className="text-indigo-600 font-medium group-hover:text-indigo-700">View Analytics →</span>
+            </Link>
+
+            <div className="group bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border-2 border-dashed border-slate-300 p-6 flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-700 mb-2">Extensible Architecture</h3>
+                <p className="text-slate-500 text-sm">Preparado para módulos empresariales adicionales e integraciones personalizadas para CLIENTE.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Security & Compliance Section - MOVED TO BOTTOM */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Security & Compliance Certification</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Comprehensive security audit completed with enterprise-grade hardening and zero vulnerabilities detected.
-            Cada área ha sido meticulosamente optimizada por el equipo de <span className="font-bold text-blue-600">SOLARIA.AGENCY</span>.
+            Cada área ha sido meticulosamente optimizada por el equipo de <span className="font-bold text-blue-600">SOLARIA.AGENCY</span>. 
+            Se ha completado una auditoría de seguridad exhaustiva con protocolos de nivel empresarial y sin vulnerabilidades detectadas.
           </p>
         </div>
 
@@ -321,87 +427,6 @@ const EnterpriseDashboard: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Applications Grid */}
-      <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Enterprise Applications</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Modular applications built with enterprise-grade standards and security protocols.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link to="/corporate" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-blue-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H5m4 0V9a2 2 0 011-1h4a2 2 0 011 1v12" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Corporate Site</h3>
-              <p className="text-slate-600 mb-4">Professional corporate presentation with enterprise branding and compliance features.</p>
-              <span className="text-blue-600 font-medium group-hover:text-blue-700">Access Application →</span>
-            </Link>
-
-            <Link to="/technical" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-green-300">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Technical Dashboard</h3>
-              <p className="text-slate-600 mb-4">Comprehensive system monitoring, security metrics, and infrastructure analytics.</p>
-              <span className="text-green-600 font-medium group-hover:text-green-700">View Metrics →</span>
-            </Link>
-
-            <Link to="/blog" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-purple-300">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Content Platform</h3>
-              <p className="text-slate-600 mb-4">Enterprise-grade content management with SEO optimization and security features.</p>
-              <span className="text-purple-600 font-medium group-hover:text-purple-700">Manage Content →</span>
-            </Link>
-
-            <Link to="/catalog" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-orange-300">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 transition-colors">
-                <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Product Catalog</h3>
-              <p className="text-slate-600 mb-4">Secure e-commerce catalog with enterprise inventory and transaction management.</p>
-              <span className="text-orange-600 font-medium group-hover:text-orange-700">Browse Products →</span>
-            </Link>
-
-            <Link to="/tracking" className="group bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-indigo-300">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition-colors">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Analytics Tracking</h3>
-              <p className="text-slate-600 mb-4">Privacy-compliant analytics with enterprise-grade data protection and GDPR compliance.</p>
-              <span className="text-indigo-600 font-medium group-hover:text-indigo-700">View Analytics →</span>
-            </Link>
-
-            <div className="group bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border-2 border-dashed border-slate-300 p-6 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-slate-700 mb-2">Extensible Architecture</h3>
-                <p className="text-slate-500 text-sm">Ready for additional enterprise modules and custom integrations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
@@ -496,15 +521,6 @@ const Footer: React.FC = () => {
         {/* Main Solaria Agency Branding */}
         <div className="text-center mb-8 pb-8 border-b border-slate-800">
           <div className="flex items-center justify-center space-x-4 mb-4">
-            <img 
-              src={solariaLogo} 
-              alt="Solaria Agency" 
-              className="h-10 w-auto" 
-              width="100" 
-              height="40"
-              loading="lazy"
-              decoding="async"
-            />
             <div className="text-2xl font-bold text-white">SOLARIA.AGENCY</div>
           </div>
           <p className="text-slate-400 max-w-2xl mx-auto">

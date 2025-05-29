@@ -1,7 +1,7 @@
 {
   "name": "prilabsa-framework",
   "private": true,
-  "version": "1.1.2",
+  "version": "1.2.0",
   "type": "module",
   "description": "Modern, modular web framework for multi-client applications. Developed by Solaria Agency.",
   "keywords": [
