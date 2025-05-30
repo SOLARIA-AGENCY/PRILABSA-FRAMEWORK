@@ -60,7 +60,7 @@ export const useAnalytics = (options: UseAnalyticsOptions): AnalyticsAPI => {
     if (!isInitializedRef.current) {
       initializeAnalytics();
     }
-  }, [appName, enableConsoleLogging]);
+  }, [appName, enableConsoleLogging, trackPageViews, location.pathname]);
 
   // Track page changes for SPA navigation
   useEffect(() => {
