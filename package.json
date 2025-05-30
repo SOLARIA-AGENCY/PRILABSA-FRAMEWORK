@@ -1,19 +1,22 @@
 {
-  "name": "prilabsa-framework",
+  "name": "solaria-agency-framework",
   "private": true,
-  "version": "1.2.0",
+  "version": "2.0.0",
   "type": "module",
-  "description": "Modern, modular web framework for multi-client applications. Developed by Solaria Agency.",
+  "description": "Enterprise-grade web development framework by Solaria Agency. Modular, secure, and performance-optimized for mission-critical applications.",
   "keywords": [
     "react",
     "typescript",
     "vite",
     "tailwindcss",
     "framework",
+    "enterprise",
     "modular",
     "multi-client",
     "atomic-design",
-    "solaria-agency"
+    "solaria-agency",
+    "security",
+    "performance"
   ],
   "author": {
     "name": "Solaria Agency",
@@ -23,10 +26,10 @@
   "homepage": "https://solaria.agency",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solariaagency/prilabsa-framework.git"
+    "url": "git+https://github.com/SOLARIA-AGENCY/SOLARIA-AGENCY-FRAMEWORK.git"
   },
   "bugs": {
-    "url": "https://github.com/solariaagency/prilabsa-framework/issues",
+    "url": "https://github.com/SOLARIA-AGENCY/SOLARIA-AGENCY-FRAMEWORK/issues",
     "email": "support@solaria.agency"
   },
   "license": "UNLICENSED",
