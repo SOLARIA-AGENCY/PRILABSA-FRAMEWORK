@@ -21,7 +21,8 @@ const queryClient = new QueryClient({
 const EnterpriseDashboard: React.FC = () => {
   const securityScore = 9.8;
   const testsCount = 95;
-  const gzipSize = "81.30 kB";
+  const bundleSize = "294.32 kB";
+  const gzipSize = "83.05 kB";
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -104,8 +105,12 @@ const EnterpriseDashboard: React.FC = () => {
                 <div className="text-sm text-slate-300">Tests Passing</div>
               </div>
               <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg px-6 py-3">
-                <div className="text-2xl font-bold text-purple-400">{gzipSize}</div>
-                <div className="text-sm text-slate-300">Optimized Bundle</div>
+                <div className="text-2xl font-bold text-purple-400">{bundleSize}</div>
+                <div className="text-sm text-slate-300">Bundle Size</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur border border-white/20 rounded-lg px-6 py-3">
+                <div className="text-2xl font-bold text-cyan-400">{gzipSize}</div>
+                <div className="text-sm text-slate-300">Gzipped</div>
               </div>
             </div>
           </div>

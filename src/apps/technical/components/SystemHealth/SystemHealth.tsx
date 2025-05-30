@@ -63,9 +63,9 @@ export const SystemHealth: React.FC<SystemHealthProps> = ({ className = '' }) =>
         },
         {
           name: 'Test Coverage',
-          status: 'healthy',
-          value: '95%',
-          description: 'Test coverage above 80% threshold',
+          status: 'warning',
+          value: '12.67%',
+          description: 'Test coverage below 80% threshold',
           lastChecked: new Date()
         },
         {
@@ -86,8 +86,8 @@ export const SystemHealth: React.FC<SystemHealthProps> = ({ className = '' }) =>
 
       const mockBuildInfo: BuildInfo = {
         status: 'success',
-        duration: 1.32,
-        size: '275.53 kB',
+        duration: 1.45,
+        size: '294.32 kB',
         timestamp: new Date(),
         errors: [],
         warnings: []

@@ -15,7 +15,7 @@
 - **Hosting**: Netlify/AWS (Infraestructura confiable)
 - **Certificado SSL**: ✅ Válido y configurado correctamente
 - **Superficie de Ataque**: ✅ Minimizada con hardening enterprise
-- **Performance**: ✅ Optimizada (dist: 275.66 kB gzipped: 81.30 kB)
+- **Performance**: ✅ Optimizada (dist: 294.32 kB gzipped: 83.05 kB)
 - **SEO**: ✅ Enterprise-grade con structured data y PWA
 
 ---

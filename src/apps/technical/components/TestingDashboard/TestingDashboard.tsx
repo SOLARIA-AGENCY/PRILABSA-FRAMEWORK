@@ -70,8 +70,8 @@ export const TestingDashboard: React.FC<TestingDashboardProps> = ({ className = 
         },
         {
           name: 'Formatters Utility Tests',
-          tests: 24,
-          passed: 24,
+          tests: 27,
+          passed: 27,
           failed: 0,
           skipped: 0,
           duration: 0.789,
@@ -80,10 +80,10 @@ export const TestingDashboard: React.FC<TestingDashboardProps> = ({ className = 
       ];
 
       const mockCoverage: CoverageMetrics = {
-        statements: 95.2,
-        branches: 87.5,
-        functions: 100,
-        lines: 94.8
+        statements: 12.63,
+        branches: 16.09,
+        functions: 15.95,
+        lines: 12.67
       };
 
       setTestSuites(mockSuites);

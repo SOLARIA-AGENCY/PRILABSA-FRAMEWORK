@@ -19,14 +19,14 @@ export const TechnicalPage: React.FC = () => {
     cspImplemented: true,
     hstsActive: true,
     sslGrade: 'A+',
-    lastAuditDate: '2025-01-15'
+    lastAuditDate: '2025-05-30'
   };
 
   const performanceMetrics = {
-    bundleSize: '275.66',
-    gzipSize: '81.30',
-    buildTime: '< 2s',
-    testCoverage: 100,
+    bundleSize: '294.32',
+    gzipSize: '83.05',
+    buildTime: '1.45s',
+    testCoverage: 12.67,
     testsCount: 95,
     buildOptimization: 'ENTERPRISE',
     codeQuality: 'STRICT'
@@ -166,7 +166,7 @@ export const TechnicalPage: React.FC = () => {
                 <span className="text-sm font-medium text-slate-700">Test Coverage</span>
                 <span className="text-lg font-bold text-green-600">{performanceMetrics.testCoverage}%</span>
               </div>
-              <p className="text-xs text-green-600 mt-1">✓ Complete</p>
+              <p className="text-xs text-green-600 mt-1">⚠️ Needs Improvement</p>
             </div>
             
             <div className="bg-orange-50 rounded-lg p-4">
