@@ -1,0 +1,196 @@
+# .cursorignore - PRILABSA Framework Core Protection
+# Protects core framework files from AI modification
+# Version: 2.0.0 | Author: Solaria Agency - ECO Lambda
+
+# =================================================================
+# CORE FRAMEWORK COMPONENTS (NEVER MODIFY)
+# =================================================================
+
+# Atomic Design Component Library
+src/components/atoms/
+src/components/molecules/
+src/components/organisms/
+src/components/pages/
+src/components/templates/
+src/components/index.ts
+
+# =================================================================
+# CORE UTILITIES (NEVER MODIFY)  
+# =================================================================
+
+# Utility Functions
+src/utils/cn.ts
+src/utils/formatters.ts
+src/utils/validation.ts
+src/utils/index.ts
+
+# =================================================================
+# CORE HOOKS (NEVER MODIFY)
+# =================================================================
+
+# Custom React Hooks
+src/hooks/useAnalytics.ts
+src/hooks/useLocalStorage.ts
+src/hooks/useSEO.ts
+src/hooks/index.ts
+
+# =================================================================
+# CORE SERVICES (NEVER MODIFY)
+# =================================================================
+
+# Analytics Services
+src/services/analytics/
+src/services/api/
+src/services/seo/
+src/services/index.ts
+
+# =================================================================
+# FRAMEWORK CONFIGURATION (NEVER MODIFY)
+# =================================================================
+
+# Core Configuration Files
+src/config/framework.config.ts
+src/config/analytics.ts
+src/config/theme.config.ts
+
+# =================================================================
+# CORE TYPE DEFINITIONS (NEVER MODIFY)
+# =================================================================
+
+# TypeScript Definitions
+src/types/index.ts
+src/types/api.types.ts
+src/types/analytics.types.ts
+
+# =================================================================
+# TECHNICAL APPLICATIONS (NEVER MODIFY)
+# =================================================================
+
+# Protected Technical Apps
+src/apps/technical/
+src/apps/tracking/
+
+# =================================================================
+# BUILD CONFIGURATION (NEVER MODIFY)
+# =================================================================
+
+# Vite Configuration
+vite.config.ts
+
+# TypeScript Configuration
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+
+# Testing Configuration
+jest.config.js
+src/setupTests.ts
+
+# CSS Framework Configuration
+tailwind.config.js
+postcss.config.js
+
+# Linting Configuration
+eslint.config.js
+
+# =================================================================
+# PACKAGE MANAGEMENT (NEVER MODIFY)
+# =================================================================
+
+# Package Configuration
+package.json
+package-lock.json
+
+# =================================================================
+# FRAMEWORK DOCUMENTATION (NEVER MODIFY)
+# =================================================================
+
+# Architecture Documentation
+docs/ARCHITECTURE.md
+docs/IMPLEMENTATION.md
+docs/PRD.md
+docs/COMPONENTS.md
+
+# Security Documentation
+EXTERNAL_SECURITY_AUDIT.md
+SECURITY_AUDIT.md
+
+# Deployment Documentation
+DEPLOYMENT_STATUS.md
+
+# =================================================================
+# VERSION CONTROL (NEVER MODIFY)
+# =================================================================
+
+# Git Configuration
+.gitignore
+
+# License and Legal
+LICENSE
+
+# Core README (framework info only)
+README.md
+
+# =================================================================
+# PUBLIC ASSETS (NEVER MODIFY)
+# =================================================================
+
+# Framework Assets
+public/manifest.json
+public/_headers
+public/_redirects
+public/.well-known/
+
+# =================================================================
+# ROOT CONFIGURATION FILES (NEVER MODIFY)
+# =================================================================
+
+# Environment Template
+env.example
+
+# Workspace Configuration
+PRILABSA-FRAMEWORK.code-workspace
+
+# Changelog
+CHANGELOG.md
+
+# =================================================================
+# PROTECTED DIRECTORIES SUMMARY
+# =================================================================
+# The following areas are COMPLETELY PROTECTED:
+# - src/components/ (entire component library)
+# - src/utils/ (all utility functions)
+# - src/hooks/ (all custom hooks)
+# - src/services/ (core services)
+# - src/apps/technical/ (technical dashboard)
+# - src/apps/tracking/ (analytics management)
+# - All configuration files
+# - All documentation files
+# - All build configuration
+
+# =================================================================
+# ALLOWED MODIFICATION AREAS
+# =================================================================
+# These areas CAN be modified for client customization:
+# - src/config/client/ (client-specific configuration)
+# - src/assets/client/ (client branding assets)
+# - src/content/client/ (client-specific content)
+# - src/apps/corporate/ (client corporate site)
+# - src/apps/blog/ (client blog - if enabled)
+# - src/apps/catalog/ (client catalog - if enabled)
+# - src/api/ (client-specific API routes)
+# - .env files (environment configuration)
+
+# =================================================================
+# SECURITY NOTICE
+# =================================================================
+# This file protects the core integrity of PRILABSA Framework
+# Modifying protected files may break:
+# - Framework functionality across all clients
+# - Update mechanisms
+# - Testing infrastructure
+# - Deployment processes
+# - Security configurations
+
+# If you need to modify core functionality, create a feature
+# request through the proper channels rather than direct modification. 
